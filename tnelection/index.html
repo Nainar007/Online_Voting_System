@@ -1,0 +1,244 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device width,initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="footer.css">
+ 
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> -->
+  <script src="https://kit.fontawesome.com/59a88b1a53.js" crossorigin="anonymous"></script>
+  <style>
+  p.time{
+    text-align: center;
+    font-size: 60px;
+    margin-top: 0px;
+  }
+.center {
+  margin: auto;
+  width: 60%;
+  border: 3px solid rgb(44, 42, 42);
+  padding: 10px;
+}
+ul.b {
+  list-style-type: square;
+}
+</style>
+<script type="text/javascript">
+function validate()
+{
+  if(ins.accept.checked=="")
+  {
+    alert("please accept the instructions!!");
+return false;
+}
+alert("YOU accepted the instructions!! click OK to continue");
+}
+</script>
+<link rel="shortcut icon" href="vote.jpg">
+<title>Home</title>
+
+</head>
+<body style=" background-color: #f4f5f7;">
+  
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100 h-80" src="tnelelogo.jpg" alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100  h-80" src="tnelelogo.jpg" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100 h-80" src="tnelelogo.jpg" alt="Third slide">
+    </div>
+  </div>
+ 
+ </div>
+<marquee bgcolor="#92a8d1"  style="color: white; text-shadow: 4px 4px 6px #000000; font-size:30px;"><b> ONLINE VOTING SYSTEM</b> || இணையதள வாக்களிப்பு</marquee>
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top bg-dark">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html"><i class="fas fa-home"></i>Home</a>
+        </li>
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Our services
+            
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="os1.php">To know your voter id NO</a></li>
+            
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Political Parties
+        
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="admk.html"> ADMK </a></li>
+            <li><a class="dropdown-item" href="dmk.html">DMK</a></li>
+            <li><a class="dropdown-item" href="ntk.html">NTK</a></li>
+            <li><a class="dropdown-item" href="mnm.html">MNM</a></li>
+            <li><a class="dropdown-item" href="bjp.html">BJP </a></li>
+          </ul>
+        </li>
+       
+      </ul>
+      
+        <ul class="mr-auto">
+          <li class="nav-item">
+            
+            <a class="nav-link" href="about.html"><i class="fa fa-angle-double-right" aria-hidden="true"></i>About</a>
+            </li>
+          </ul>
+      
+    </div>
+  </div>
+</nav>
+ 
+<br></br>
+
+<section>
+  <p  id="demo" class="time"></p>
+    <script>
+
+    // Set the date we're counting down to
+    var countDownDate = new Date("july 27, 2021 16:12:25").getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function () {
+
+      // Get today's date and time
+      var now = new Date().getTime();
+
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+
+      // Time calculations for days, hours, minutes and seconds
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Output the result in an element with id="demo"
+      document.getElementById("demo").innerHTML =  hours + "hr: "
+      + minutes + "min :" + seconds + "Sec ";
+
+      // If the count down is over, write some text
+
+      if (distance < 0) {
+        clearInterval(x);
+        
+        document.getElementById("hr").style.visibility = "hidden";
+        document.getElementById("border").style.visibility = "hidden";
+        document.getElementById("form").style.visibility = "hidden";
+        
+        document.getElementById("demo").innerHTML = "TIME OVER";
+      }
+    }, );
+    </script>
+  <nav>
+  <center>
+    <h1 style="color: white; text-shadow: 2px 2px 4px #000000; font-size:50px;"> <a href="result.php">*Live Results*</a></h1>
+  </center>
+   </nav>
+   <hr class="hr mx-5 mt-5" id="hr" style="box-shadow:5px 4px 8px rgb(24, 23, 23);">
+   <br>
+   <div class="center shadow-lg p-3 mb-5 bg-body rounded" id="border" >
+   <form name="ins" id="form" onsubmit="return validate()" action="checkdetails.php">
+     <h1 class="shadow-lg p-3 mb-5 bg-body rounded" style="text-align:center; color:hsl(147, 50%, 47%); font-size:40px;">INSTRUCTIONS FOR VOTING</h1>
+     <ul class="b">
+       <br>
+     <li>The voters shold enter their respective voter identity No,Aadhaar No and mobile No(only mobile no linked with aadhaar)</li>
+       <li>The voters should select therir respective District,Constituency.</li>
+       <li>If the voters did not know their voter id No, they can be know their voter id No by our services.</li>
+       <li>the voting members kindly check your details before verification</li>
+       <li>The voting process starts from 9:00AM and ends at 5:00PM, you are requested to vote within the time frame.</li>
+       <li>Once the mobile no is entered nd send OTP button is clicked OTP code will be send to entered mobile no.</li>
+       <li>The voters will only able to click their vote botton only once and their vote will be counted automatically to result page.</li>
+       <li>Once voting is completed , the already voted member cannot vote again</li>
+     </ul>
+     <input type="checkbox" id="accept" name="accept" value="accept">
+   <label for="accept" style="color:blue;">I accept the instructions</label><br>
+   <center><button type="submit" id="btn" name="submit"  value="Submit">Continue</button></center>
+   </form>
+   </div>
+   </p>
+</section>
+ <!--Section: contact-->
+<section id="contact" class="py-5" style="background-color: #eee;">
+
+  <div class="container">
+
+      <!-- Section heading -->
+      <h2 class="h1-responsive font-weight-bold text-center mb-5">Contact us</h2>
+   
+     
+      <!-- Grid row -->
+      <div class="row">
+
+          
+
+          <!-- Grid column -->
+          <div class="col-md text-center">
+          <ul class="list-unstyled mb-0">
+              <li>
+                <br>
+              <i class="fas fa-map-marker-alt fa-2x purple-text"></i>
+              <p> IT-VCET,Viraganoor,Madurai west</p>
+              </li>
+              </ul>
+              </div>
+              <div class="col-md text-center">
+                <ul class="list-unstyled mb-0">
+                    <li>
+                      <br>
+                    <i class="fas fa fa-fax fa-2x purple-text"></i>
+                    <p>045-12345678</p>
+                    </li>
+                    </ul>
+                    </div>
+              <div class="col-md text-center">
+                <ul class="list-unstyled mb-0">
+              <li>
+              <i class="fas fa-phone fa-2x mt-4 purple-text"></i>
+              <p>01020304</p>
+              </li>
+              </ul>
+              </div>
+              <div class="col-md text-center">
+                <ul class="list-unstyled mb-0">
+              <li>
+              <i class="fas fa-envelope fa-2x mt-4 purple-text"></i>
+              <p class="mb-0">Tne@Gov.In</p>
+              </li>
+          </ul>
+          </div>
+          <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+     
+  </div>
+
+</section>
+<!--Section: contact-->
+ 
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+ <script src="https://code.jquery.com/jquery-3.6.0.js" ></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+</body>
+ </html>

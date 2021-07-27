@@ -1,0 +1,54 @@
+
+footer{
+width: 100%;
+
+background: linear-gradient(to right, black 0%, hsla(9, 85%, 64%, 0.4) 100%);
+
+float: left;
+color: white;
+padding: 10px ;
+
+}
+
+footer .footer-box{
+width: 25%;
+float: left;
+height: 25%;
+}
+
+footer .footer-box a{
+display: block;
+color: white;
+font-size: 20px;
+text-transform: capitalize;
+}
+footer .footer-box a:hover{
+text-decoration: none;
+color: #ffb566 ;
+
+}
+.hr {
+    border: none;
+    border-top: 3px double grey;
+    color: rgb(22, 21, 21);
+    overflow: visible;
+    text-align: center;
+    height: 5px;
+}
+#btn
+{
+ 
+     margin:20px 7px;
+     padding: 20px;
+     border-radius:40px;
+     width:150px;
+     
+}
+#btn:hover
+{
+ background: #5079ad; 
+ border:none;
+ box-shadow:5px 4px 8px #999;
+ color:white;
+ transition:0.3s;
+}
