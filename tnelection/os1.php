@@ -7,9 +7,9 @@
     <title>know ur vid no</title>
     <link href="os1.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="footer.css">
-  <!-- bootstrap for navbar -->
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script>
+// 	    select bow
 function populate(s1,s2){
       var s1 = document.getElementById(s1);
  	var s2 = document.getElementById(s2);
@@ -176,14 +176,6 @@ if(isset($_POST['find']))
   $query_run= mysqli_query($connection,$query);
   while($row = mysqli_fetch_array($query_run))
   {
-    
-  //   <!-- <form  method="POST">
-  //     <br></br>
-  //     <center>
-  //   <input type="text" name="id"  value="/>
-  // </center>
-  // </form>
-  //    -->
      echo '<script>alert("Your voter id :'.$row['id'].'")</script>';
 
   }
@@ -202,7 +194,6 @@ if(isset($_POST['find']))
 
  <script src="https://kit.fontawesome.com/59a88b1a53.js" crossorigin="anonymous"></script>
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
- <!-- <script src="https://code.jquery.com/jquery-3.6.0.js" ></script> -->
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
 
