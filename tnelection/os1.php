@@ -158,8 +158,10 @@ To know your VOTER ID NO</p>
 
 <p class="gender">
 <span class="gen text-primary">Gender</span>
-                        <input type="checkbox" name="ge" class="genm text-primary">Male
-                        <input type="checkbox" name="ge" class="genm text-primary">Female
+                 <input type="checkbox" name="ge" class="genm">
+                        <label style="color:blue;">Male</label>
+                        <input type="checkbox" name="ge" class="genm">
+                        <label style="color:blue;">Female</label>
                     </p>
 <p>
 <input type="submit"  name="find" value="FIND" class="sub" onClick="no()"/></p>
