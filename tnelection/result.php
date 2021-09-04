@@ -3,25 +3,8 @@
 <head>
 <link rel="shortcut icon" href="vote.jpg">
   <title>RESULTS</title>
-    
-  
-  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"> -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <style>
-/* .myDiv {
-  width: 70%;
-  height: 500px;
-    margin-top: 50px;
-  margin-bottom: 100px;
-  margin-right: 50px;
-  margin-left: 200px;
-  padding: 4px 4px 4px 4px;
-  background-color: lightcoral;
-  border: 4px solid #ccc;
-  border-radius: 20px;
-  font-size: 16px;
-  resize: none;
-} */
     #nm {
         width: 80%;
     }
@@ -146,21 +129,6 @@ h4 {text-align: center;}
 
     $conn= @mysqli_connect($DB_HOST,$DB_USER,$DB_PASSWORD,$DB_NAME)
     or die("Couldn't Connect to Database :");
-
-
-
-    $sql= "INSERT INTO tnelection.vote VALUES(null,'".$voted_for."');";
-
-
-    if(mysqli_query($conn, $sql)){
-
-    echo "<center><h3 class='text-info specialHead text-center'><strong>*YOU HAVE VOTED SUCCESSFULLY AND RESULTS ARE*</strong></h3></center><br>";
-    }
-    else
-    {
-    echo "<h3 class='text-info specialHead text-center'><strong> SORRY! WE'VE SOME ISSUE..</strong></h3>";
-    echo "<a href='vote.html' class='btn btn-primary'> <span class='glyphicon glyphicon-ok'></span> <strong> BACK</strong> </a><br>";
-    }
 
 
 
