@@ -6,7 +6,6 @@
     <link rel="shortcut icon" href="vote.jpg">
     <title>check details</title>
     <link href="cd.css" rel="stylesheet">
-    <!-- <link rel="stylesheet" type="text/css" href="footer.css"> -->
  <!--Css Stylesheets-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
@@ -164,13 +163,10 @@ $connection=mysqli_connect($hostname,$username,$password,$database);
 
   if($count>0)
   {
-    // echo '<center><h1 style="color:blue"><b>'.$username.'</b> is already voted</h1></center>';
-    // echo '<center><button id="btn" href="tnelection.html">Back</button></center>';
     echo '<script>alert("'.$userid.'Your already voted")</script>';
 
   }
-  else {
-      // echo $_POST['vid']."hello";        
+  else {        
     $id=$_POST['vid'];
     $query = mysqli_query($connection, "SELECT * FROM checkdetails where id='$id' ");
     $row = mysqli_fetch_assoc($query);
@@ -183,7 +179,9 @@ $connection=mysqli_connect($hostname,$username,$password,$database);
             </script>
         ';
     echo '
-<!-- Edit department modal -->
+    
+<!-- Edit modal -->
+
 <div class="modal fade" id="viewdetails" tabindex="-1" role="dialog" aria-labelledby="EditdepartmentModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
