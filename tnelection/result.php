@@ -131,6 +131,19 @@ h4 {text-align: center;}
     or die("Couldn't Connect to Database :");
 
 
+    $sql= "INSERT INTO tnelection.vote VALUES(null,'".$voted_for."');";
+
+
+    if(mysqli_query($conn, $sql)){
+
+    echo "<center><h3 class='text-info specialHead text-center'><strong>*YOU HAVE VOTED SUCCESSFULLY AND RESULTS ARE*</strong></h3></center><br>";
+    }
+    else
+    {
+    echo "<h3 class='text-info specialHead text-center'><strong> SORRY! WE'VE SOME ISSUE..</strong></h3>";
+    echo "<a href='vote.html' class='btn btn-primary'> <span class='glyphicon glyphicon-ok'></span> <strong> BACK</strong> </a><br>";
+    }
+
 
                 $ADMK=0;
                 $DMK=0;
