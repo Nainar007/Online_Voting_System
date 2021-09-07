@@ -1,10 +1,31 @@
+<?php 
+$voted_for="";
+$voter_id="";
+?>
 <!DOCTYPE html>
 <html>
 <head>
 <link rel="shortcut icon" href="vote.jpg">
   <title>RESULTS</title>
+    
+  
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"> -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <style>
+/* .myDiv {
+  width: 70%;
+  height: 500px;
+    margin-top: 50px;
+  margin-bottom: 100px;
+  margin-right: 50px;
+  margin-left: 200px;
+  padding: 4px 4px 4px 4px;
+  background-color: lightcoral;
+  border: 4px solid #ccc;
+  border-radius: 20px;
+  font-size: 16px;
+  resize: none;
+} */
     #nm {
         width: 80%;
     }
@@ -118,7 +139,7 @@ h4 {text-align: center;}
     {
 
       $voted_for= test_input($_POST["selectedCandidate"]);
-
+      $voter_id=test_input($_POST['voter_id']);
     }
 
     $DB_HOST= "localhost";
@@ -131,13 +152,20 @@ h4 {text-align: center;}
     or die("Couldn't Connect to Database :");
 
 
+
     $sql= "INSERT INTO tnelection.vote VALUES(null,'".$voted_for."');";
 
 
     if(mysqli_query($conn, $sql)){
 
-    echo "<center><h3 class='text-info specialHead text-center'><strong>*YOU HAVE VOTED SUCCESSFULLY AND RESULTS ARE*</strong></h3></center><br>";
-    }
+      $sql2="INSERT INTO tnelection.testvote VALUES(null,'".$voter_id."');";
+      if(mysqli_query($conn, $sql2)){
+        echo "<center><h3 class='text-info specialHead text-center'><strong>*YOU HAVE VOTED SUCCESSFULLY AND RESULTS ARE*</strong></h3></center><br>";
+      }else{
+        echo "<center><h3 class='text-info specialHead text-center'><strong>*DATABSE INSERTION FAILED FOR VOTER ID*</strong></h3></center><br>";
+      }
+
+  }
     else
     {
     echo "<h3 class='text-info specialHead text-center'><strong> SORRY! WE'VE SOME ISSUE..</strong></h3>";
@@ -145,12 +173,13 @@ h4 {text-align: center;}
     }
 
 
+
                 $ADMK=0;
                 $DMK=0;
                 $NTK=0;
                 $MNM=0;
                 $NOTA=0;
-              $BJP=0;
+                $BJP=0;
 
                 $conn = mysqli_connect($hostname, $username, $password, $database);
                 if(!$conn)
