@@ -6,8 +6,6 @@
     <link rel="shortcut icon" href="vote.jpg">
     <title>check details</title>
     <link href="cd.css" rel="stylesheet">
-    <!-- <link rel="stylesheet" type="text/css" href="footer.css"> -->
- <!--Css Stylesheets-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
     <script>
