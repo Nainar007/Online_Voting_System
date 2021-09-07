@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -118,6 +119,7 @@ th{
     <br></br>
     <section >
       <form name="ins" onsubmit="return validate()" action="result.php" method="post">
+      <input type="hidden" value="<?php echo $_POST['voter_id']?>" name="voter_id">
         <center><caption><h1 style="color: blue; text-shadow: 2px 2px 4px #000000; font-size:50px;">vote the candidates</h1></caption></center>
         <hr class="hr mx-5 mt-5" style="box-shadow:5px 4px 8px rgb(24, 23, 23);">
         <br>
@@ -247,8 +249,6 @@ th{
 <!--Section: contact-->
  <script src="https://kit.fontawesome.com/59a88b1a53.js" crossorigin="anonymous"></script>
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
- <!-- <script src="https://code.jquery.com/jquery-3.6.0.js" ></script> -->
- <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script> -->
-
+ 
 </body>
 </html>
