@@ -6,6 +6,7 @@
     <link rel="shortcut icon" href="vote.jpg">
     <title>check details</title>
     <link href="cd.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" type="text/css" href="footer.css"> -->
  <!--Css Stylesheets-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
@@ -166,7 +167,7 @@ $connection=mysqli_connect($hostname,$username,$password,$database);
     echo '<script>alert("'.$userid.'Your already voted")</script>';
 
   }
-  else {        
+  else {      
     $id=$_POST['vid'];
     $query = mysqli_query($connection, "SELECT * FROM checkdetails where id='$id' ");
     $row = mysqli_fetch_assoc($query);
@@ -179,9 +180,7 @@ $connection=mysqli_connect($hostname,$username,$password,$database);
             </script>
         ';
     echo '
-    
 <!-- Edit modal -->
-
 <div class="modal fade" id="viewdetails" tabindex="-1" role="dialog" aria-labelledby="EditdepartmentModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -191,39 +190,40 @@ $connection=mysqli_connect($hostname,$username,$password,$database);
                 <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form method="POST" action="" enctype="multipart/form-data">
+            <form method="post" action="vote.php" enctype="multipart/form-data">
                 <div class="modal-body">
                 <div class="form-group">
                 <label for="message-text" class="col-form-label">Voter id:</label>
-                <input type="text" class="form-control" placeholder="Enter the Department Name" name="edit_departname" id="edit_departname" value="'.$row['id'].'">
+                <input type="text" class="form-control"  name="voter_id" id="edit_departname" value="'.$row['id'].'">
             </div>
               
                     <div class="form-group">
                         <label for="message-text" class="col-form-label">Voter Name :</label>
-                        <input type="text" class="form-control" placeholder="Enter the Department Name" name="edit_departname" id="edit_departname" value="'.$row['Name'].'">
+                        <input type="text" class="form-control"  id="edit_departname" value="'.$row['Name'].'">
                     </div>
                     <div class="form-group">
                     <label for="message-text" class="col-form-label">Voter father Name :</label>
-                    <input type="text" class="form-control" placeholder="Enter the Department Name" name="edit_departname" id="edit_departname" value="'.$row['Father_name'].'">
+                    <input type="text" class="form-control"  id="edit_departname" value="'.$row['Father_name'].'">
                 </div>
                
                 <div class="form-group">
                 <label for="message-text" class="col-form-label">Voter D.O.B:</label>
-                <input type="text" class="form-control" placeholder="Enter the Department Name" name="edit_departname" id="edit_departname" value="'.$row['D_O_B'].'">
+                <input type="text" class="form-control"  id="edit_departname" value="'.$row['D_O_B'].'">
             </div>
             <div class="form-group">
             <label for="message-text" class="col-form-label">Gender :</label>
-            <input type="text" class="form-control" placeholder="Enter the Department Name" name="edit_departname" id="edit_departname" value="'.$row['Gender'].'">
+            <input type="text" class="form-control"  id="edit_departname" value="'.$row['Gender'].'">
         </div>
                     <div class="form-group">
                          <label for="message-text" class="col-form-label">Voter Address :</label>
-                        <input type="text" class="form-control" placeholder="Enter the Amount" name="edit_depart_amt" id="edit_depart_amt" value="'.$row['Address'].'">
+                        <input type="text" class="form-control" id="edit_depart_amt" value="'.$row['Address'].'">
                    </div>
                    
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
-                    <a href="vote.html" class="btn btn-success">Continue</a>
+
+                    <button type="submit" class="btn btn-success">Continue</button>
                 </div>
             </form>
             </div>
